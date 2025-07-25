@@ -1,0 +1,10 @@
+---
+
+- name: Playbook 8 group variable inventories
+  hosts: server
+  tasks:
+    - name: task 1
+      shell: echo "ini {{ os }}" > /home/automate/os.txt
+
+    - name: task 2
+      shell: echo "ini {{ aa }}" > /home/automate/os.txt
