@@ -1,0 +1,11 @@
+---
+
+- name: Playbook 5 penggunaan vars
+  hosts: server
+  tasks:
+    - name: Get Linux Info
+      vars:
+        - var1: Ini esa
+        - var2: Ini putri
+      shell: echo "satu adalah {{ var1 }}, dua adalah {{ var2 }}" > /home/automate/hasil-var.txt
+

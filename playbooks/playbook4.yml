@@ -1,0 +1,11 @@
+---
+
+- name: Playbook 3 become yes
+  hosts: server
+  become: yes
+  tasks:
+    - name: Get Linux Info
+      shell: uname -a > /home/automate/info-new1.txt
+      ignore_errors: yes
+    - name: Get uptime
+      shell: uptime >> /home/automate/info-new1.txt

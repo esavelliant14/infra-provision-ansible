@@ -1,0 +1,11 @@
+---
+
+- name: Playbook 7 vars diletakkan di directory lain
+  hosts: server
+  vars_files:
+    - ../vars/variable-1.yml
+  tasks:
+    - name: var 1
+      shell: echo "satu adalah {{ var1 }}, dua adalah {{ var2 }}" > /home/automate/hasil-var2.txt
+    - name: var 2
+      shell: echo "satu adalah {{ var2 }}, dua adalah {{ var1 }}" >> /home/automate/hasil-var2.txt

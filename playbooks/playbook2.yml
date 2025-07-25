@@ -1,0 +1,9 @@
+---
+
+- name: Playbook 2 multi task
+  hosts: server
+  tasks:
+    - name: Get Linux Info
+      shell: uname -a > /home/automate/info-new1.txt
+    - name: Get uptime
+      shell: uptime >> /home/automate/info-new1.txt

@@ -1,0 +1,7 @@
+---
+
+- name: Playbook 1 info linux
+  hosts: server
+  tasks:
+    - name: Get Linux Info
+      shell: uname -a > /home/automate/info-new.txt
