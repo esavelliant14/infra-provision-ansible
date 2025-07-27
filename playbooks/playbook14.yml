@@ -1,0 +1,18 @@
+---
+
+- name: Playbook 14 debugging task
+  hosts: server
+  vars:
+    - var1: "esa"
+    - var2: "mantab"
+    - var3: "jiwa"
+  tasks:
+    - name: task 1
+      command: echo -e "pada suatu hari\nseorang bernama {{var1}} memang terlalu {{var2}} dan {{var3}}"
+      register: result_hehe
+
+    - name: show result_hehe only stdout_line
+      debug: msg="{{result_hehe.stdout_lines}}"
+
+    - name: show result_hehe full
+      debug: msg="{{result_hehe}}"

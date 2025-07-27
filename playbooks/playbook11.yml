@@ -1,0 +1,13 @@
+---
+
+- name: Playbook 11 memanggil variable dari fact, fact itu -m setup
+  hosts: server
+  tasks:
+    - name: task 1
+      shell: echo "ini {{ os }}" > /home/automate/os.txt
+
+    - name: task 2
+      shell: echo "ini {{ aa }}" >> /home/automate/os.txt
+    
+    - name: task 3
+      shell: echo "ini osnya adalah {{ ansible_os_family }}" >> /home/automate/os.txt

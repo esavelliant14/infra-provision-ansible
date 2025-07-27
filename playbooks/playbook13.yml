@@ -1,0 +1,9 @@
+---
+
+- name: Playbook 13 debugging
+  hosts: server
+  vars:
+    - var1: "ini adalah variable"
+  tasks:
+    - name: task 1
+      debug: msg="{{ var1 }}"
