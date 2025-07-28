@@ -1,0 +1,11 @@
+---
+
+- name: Playbook 15 condition with boolean
+  hosts: server
+  tasks:
+    - name: task 1
+      shell: echo "hello new task" > /home/automate/condition-1.txt
+      when: harus_dijalankan
+
+
+###harus dijalankan adalah sebuah variable di host_vars
